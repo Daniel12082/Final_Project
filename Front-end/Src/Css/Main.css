@@ -70,10 +70,10 @@ nav{
     transition: var(--tran-05);
 }
 nav.close{
-    width: 73px;
+    width: 80px;
 }
 nav .logo-name{
-
+    cursor: pointer;
     display: flex;
     align-items: center;
     padding: 4%;
@@ -83,31 +83,29 @@ nav .logo-image img{
     object-fit: cover;
     border-radius: 50%;
 }
-nav .logo-name .logo_name{
-    opacity: 1;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transición de opacidad */
-    pointer-events: auto;
+nav .logo-name span{
+    transition: var(--tran-05);
+    pointer-events: none;
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color);
     margin-left: 10px;
+
 }
 nav.close .menu-items .nav-links{
     margin-top: 10px;
 }
-nav.close .logo_name{
+nav.close .logo-name span{
     opacity: 0;
-    pointer-events: none; /* Deshabilitar interacciones con el elemento */
-    transition: opacity 0.3s ease, visibility 0s linear 0s; /* Transición de opacidad */
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
 }
 nav.close .menu-items .logout-mode .li .a .span{
     display: none;
 }
-nav.close .menu-items.logout-mode {
+nav.close .menu-items .logout-mode {
     padding: 0px;
+}
+nav.close .menu-items .logout-mode .mode i{
+    display: none;
 }
 nav .menu-items{
     height: calc(100% - 90px);
@@ -336,10 +334,6 @@ nav.close ~ .dashboard .top{
 .nav-links li{
     margin: 15px 0 15px 0;
 }
-nav.close .nav-links li a span{
-    display: none;
-}
-
 @media (max-width: 1000px) {
     nav{
         width: 73px;
