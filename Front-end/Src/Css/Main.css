@@ -85,8 +85,8 @@ nav .logo-image img{
 }
 nav .logo-name .logo_name{
     opacity: 1;
-    transition: opacity 0.3s ease;
-    display: block;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transición de opacidad */
+    pointer-events: auto;
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color);
@@ -96,7 +96,10 @@ nav.close .menu-items .nav-links{
     margin-top: 10px;
 }
 nav.close .logo_name{
-    display: none;
+    opacity: 0;
+    pointer-events: none; /* Deshabilitar interacciones con el elemento */
+    transition: opacity 0.3s ease, visibility 0s linear 0s; /* Transición de opacidad */
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
