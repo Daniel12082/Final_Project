@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="Field/bootstrap/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="Src/Css/Main.css">
+	<link rel="stylesheet" href="../Field/bootstrap/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="../Src/Css/Main.css">
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 	<title>AdminSite</title>
 </head>
@@ -13,9 +13,8 @@
 	<nav>
         <div class="logo-name">
             <div class="logo-image">
-                <img src="Src/Icon/Logo-min.png" alt="">
+                <img src="../Src/Icon/Logo-min.png" alt="">
             </div>
-
             <span class="logo_name">Garden</span>
         </div>
 
@@ -48,7 +47,7 @@
             </ul>
             
             <ul class="logout-mode">
-                <li><a href="Pages/Login.html">
+                <li><a href="Login.html">
                     <i class="uil uil-signout"></i>
                     <span class="link-name">Logout</span>
                 </a></li>
@@ -69,29 +68,20 @@
 
     <section class="dashboard">
         <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
+            <i class="uil uil-bars sidebar-toggle" onclick="toggleLogoName()"></i>
 
             <div class="search-box">
                 <i class="uil uil-search"></i>
                 <input type="text" placeholder="Search here...">
             </div>
 				<div class="profile">
-					<a href="Pages/Profile.html">
+					<a href="Profile.html">
 						<i class="uil uil-user" id="profile"></i>
 					</a>
 				</div>
         </div>
-
-        <div class="dash-content">
-            <div class="overview">
-                <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
-                </div>
-            </div>
-        </div>
     </section>
-	<script src="Field/bootstrap/js/bootstrap.min.js"></script>
-	<script src="Src/Js/app.js"></script>
+	<script src="../Field/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../Src/Js/app.js"></script>
 </body>
 </html>

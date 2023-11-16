@@ -73,24 +73,27 @@ nav.close{
     width: 73px;
 }
 nav .logo-name{
-
     display: flex;
     align-items: center;
     padding: 4%;
+}
+nav .logo-image{
+    display: flex;
+    justify-content: center;
+    min-width: 10px;
 }
 nav .logo-image img{
     width: 60px;
     object-fit: cover;
     border-radius: 50%;
 }
+
 nav .logo-name .logo_name{
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    display: block;
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color);
     margin-left: 10px;
+    transition: var(--tran-05);
 }
 nav.close .menu-items .nav-links{
     margin-top: 10px;
@@ -268,9 +271,6 @@ nav.close ~ .dashboard .top{
     color: var(--text-color);
     cursor: pointer;
 }
-.dash-content{
-    margin-left: 30px;
-}
 .dashboard .top .search-box{
     position: relative;
     height: 50px;
@@ -303,32 +303,6 @@ nav.close ~ .dashboard .top{
 .top img{
     width: 40px;
     border-radius: 50%;
-}
-.dashboard .dash-content{
-    padding-top: 30px;
-}
-.dash-content .title{
-    display: flex;
-    align-items: center;
-    margin: 60px 0 30px 0;
-}
-.dash-content .title i{
-    position: relative;
-    height: 35px;
-    width: 35px;
-    background-color: var(--primary-color);
-    border-radius: 6px;
-    color: var(--title-icon-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-}
-.dash-content .title .text{
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--text-color);
-    margin-left: 10px;
 }
 .nav-links li{
     margin: 15px 0 15px 0;
@@ -401,9 +375,6 @@ nav.close .nav-links li a span{
     nav.close .logo_name{
         opacity: 0;
         pointer-events: none;
-    }
-    nav.close .logout-mode{
-
     }
     nav li a .link-name{
         opacity: 0;
