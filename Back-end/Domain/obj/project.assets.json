@@ -5045,11 +5045,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\APM02-042\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Yael Cano\\.nuget\\packages\\": {}
+>>>>>>> origin/Back-end
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj",
       "projectName": "Domain",
       "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj",
@@ -5058,6 +5063,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+      "projectName": "Domain",
+      "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
       ],
       "originalTargetFrameworks": [
         "net7.0"

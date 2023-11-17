@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\API\\API.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +43,13 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj": {
                 "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj"
+=======
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj"
+>>>>>>> origin/Back-end
               }
             }
           }
@@ -96,6 +118,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -107,6 +130,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -118,11 +154,19 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj"
               },
               "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj": {
                 "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj"
+=======
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj"
+>>>>>>> origin/Back-end
               }
             }
           }
@@ -156,6 +200,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -167,6 +212,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -223,6 +281,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -234,6 +293,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -245,8 +317,13 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj"
+=======
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+>>>>>>> origin/Back-end
               }
             }
           }
