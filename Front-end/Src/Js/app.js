@@ -30,3 +30,15 @@ sidebarToggle.addEventListener("click", () => {
         localStorage.setItem("status", "open");
     }
 })
+let isDarkMode = false;
+
+document.querySelectorAll('.box_1 button').forEach(button => {
+    button.addEventListener('click', () => {
+        if (isDarkMode) {
+            button.style.backgroundColor = 'var(--primary-color)';
+        } else {
+            button.style.backgroundColor = 'var(--black-light-color)';
+        }
+        isDarkMode = !isDarkMode;
+    });
+});
