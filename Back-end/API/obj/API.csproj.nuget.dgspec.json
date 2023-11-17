@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\API\\API.csproj": {}
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\API\\API.csproj": {
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\API\\obj\\",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj"
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj"
               }
             }
           }
@@ -96,17 +96,17 @@
         }
       }
     },
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj": {
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -118,11 +118,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -156,17 +156,17 @@
         }
       }
     },
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -223,17 +223,17 @@
         }
       }
     },
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -245,8 +245,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj"
               }
             }
           }
