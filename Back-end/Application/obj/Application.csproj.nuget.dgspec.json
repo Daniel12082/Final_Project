@@ -1,20 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj": {}
+<<<<<<< HEAD
+    "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj": {
+    "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Application\\obj\\",
+        "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\APM02-042\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,11 +43,19 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+<<<<<<< HEAD
+              "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj"
+              "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj"
+=======
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj"
+>>>>>>> origin/Back-end
               }
             }
           }
@@ -60,21 +85,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+<<<<<<< HEAD
+    "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\APM02-042\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -127,21 +166,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+<<<<<<< HEAD
+    "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\APM02-042\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM02-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/Back-end
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -153,8 +206,13 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Desktop\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+<<<<<<< HEAD
+              "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\APM02-042\\Desktop\\Final_Project-1\\Back-end\\Domain\\Domain.csproj"
+=======
+              "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Back-end\\Domain\\Domain.csproj"
+>>>>>>> origin/Back-end
               }
             }
           }
@@ -194,7 +252,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
