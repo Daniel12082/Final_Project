@@ -8,11 +8,13 @@ using Persistence.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.ConfigureRateLimiting();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureCors();
-builder.Services.AddAplicacionServices();
+builder.Services.AddAplicationServices();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddDbContext<JardineriaContext>(options =>
 {
