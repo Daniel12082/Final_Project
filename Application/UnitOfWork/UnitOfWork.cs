@@ -30,6 +30,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private IProductLine _productLines;
     private IProveedor _proveedores;
     private IState _states;
+    private IUser _user;
     public IBoss Bosses {
         get
         {
@@ -200,6 +201,17 @@ public class UnitOfWork : IUnitOfWork, IDisposable
                 _cities = new CityRepository(_context);
             }
             return _cities;
+        }
+    }
+
+    public IUser User {
+        get
+        {
+            if (_user == null)
+            {
+                _user = new UserRepository(_context);
+            }
+            return _user;
         }
     }
 

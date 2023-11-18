@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
-        public int id {get; set;}
         public string email {get; set;}
         public string PasswordHash {get; set;}
     }

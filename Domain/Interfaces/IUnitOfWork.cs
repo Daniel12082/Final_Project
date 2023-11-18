@@ -22,7 +22,7 @@ namespace Domain.Interfaces;
         IProductLine ProductLines {get;}
         IProveedor Proveedores {get;}
         IState States {get;}
-        
+        IUser User {get;}
         Task<int> SaveAsync();
     }
 
