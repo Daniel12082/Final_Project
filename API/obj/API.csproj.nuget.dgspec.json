@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.12, )"
@@ -67,6 +71,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.14, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -121,8 +129,8 @@
               "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj"
+              "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
+                "projectPath": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -223,14 +231,14 @@
         }
       }
     },
-    "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
+    "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
+        "projectPath": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\obj\\",
+        "outputPath": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"

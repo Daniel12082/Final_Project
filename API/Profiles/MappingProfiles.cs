@@ -29,7 +29,7 @@ namespace API.Profiles
             CreateMap<ProductLine, ProductLineDto>().ReverseMap();
             CreateMap<Proveedor, ProveedorDto>().ReverseMap();
             CreateMap<State, StateDto>().ReverseMap();
-
+            CreateMap<User, UserDto>().ReverseMap();
         }
     }
 }
