@@ -5,35 +5,51 @@ using System.Threading.Tasks;
 using API.Dto;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Persistence.Data;
 
 namespace API.Contoller
 {
     public class UserController: BaseController
     {
+        private readonly JardineriaContext _dbContext;
+
+        public UserController(JardineriaContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
         public static User user = new User();
 
-        [HttpPost("register")]
-        public ActionResult<User>  Register(UserDto request)
+        public ActionResult<User> Register(UserDto request)
         {
-            string PasswordHasher
-                =BCrypt.Net.BCrypt.HashPassword(request.password);
-            user.email = request.email;
-            user.PasswordHash = PasswordHasher;
-            return Ok(user);
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.password);
+            var newUser = new User
+            {
+                email = request.email,
+                PasswordHash = passwordHash
+            };
+
+            _dbContext.Users.Add(newUser);
+            _dbContext.SaveChanges();
+
+            return Ok("Bienvenido");
         }
         [HttpPost("login")]
-        public ActionResult<User>  Login(UserDto request)
+        public ActionResult<User> Login(UserDto request)
         {
-            Console.WriteLine(request.email,request.password);
-            if(user.email != request.email){
-                return BadRequest("User no register");
-            }
-            if(!BCrypt.Net.BCrypt.Verify(request.password, user.PasswordHash))
+            var user = _dbContext.Users.FirstOrDefault(u => u.email == request.email);
+
+            if (user == null)
             {
-                return BadRequest("Password incorrect");
+                return BadRequest("User not registered");
             }
-            else{
-                return Ok(user);
+
+            if (!BCrypt.Net.BCrypt.Verify(request.password, user.PasswordHash))
+            {
+                return BadRequest("Incorrect password");
+            }
+            else
+            {
+                return Ok("Registro Exitoso");
             }
         }
     }
