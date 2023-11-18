@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Dto
 {
-    public class LocationClienteDto
+    public class ProductLineDto
     {
         
     }

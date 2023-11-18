@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Dto;
 using AutoMapper;
 using Domain.Entities;
 
@@ -23,7 +24,12 @@ namespace API.Profiles
             CreateMap<Office, OfficeDto>().ReverseMap();
             CreateMap<Order, OrderDto>().ReverseMap();
             CreateMap<OrderDetail, OrderDetailDto>().ReverseMap();
-            
+            CreateMap<Payment, PaymentDto>().ReverseMap();
+            CreateMap<Product, ProductDto>().ReverseMap();
+            CreateMap<ProductLine, ProductLineDto>().ReverseMap();
+            CreateMap<Proveedor, ProveedorDto>().ReverseMap();
+            CreateMap<State, StateDto>().ReverseMap();
+
         }
     }
 }

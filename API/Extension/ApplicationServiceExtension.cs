@@ -15,9 +15,9 @@ public static class ApplicationServiceExtensions
         services.AddCors(options =>
         {
             options.AddPolicy("CorsPolicy", builder =>
-                builder.AllowAnyOrigin()    //WithOrigins("https://domain.com")
-                    .AllowAnyMethod()       //WithMethods("GET","POST)
-                    .AllowAnyHeader());     //WithHeaders("accept","content-type")
+                builder.AllowAnyOrigin()    
+                    .AllowAnyMethod() 
+                    .AllowAnyHeader());  
         });
     public static void AddAplicacionServices(this IServiceCollection services)
     {
