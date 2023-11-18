@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ApiJwt.Extension;
+namespace API.Extension;
 
 public static class ApplicationServiceExtensions
 {
@@ -21,7 +21,6 @@ public static class ApplicationServiceExtensions
         });
     public static void AddAplicacionServices(this IServiceCollection services)
     {
-        services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
     // public static void AddJwt(this IServiceCollection services, IConfiguration configuration)

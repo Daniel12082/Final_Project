@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {}
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
     "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj": {
@@ -71,14 +71,14 @@
         }
       }
     },
-    "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
+        "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\obj\\",
+        "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
