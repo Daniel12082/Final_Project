@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Payment
+public partial class Payment : BaseEntityString
 {
+
     public string PaymentMethod { get; set; } = null!;
 
     public string TransactionId { get; set; } = null!;

@@ -1,29 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using Domain.Entities;
 
 namespace Domain.Entities;
 
-public partial class Client
+public partial class Client  : BaseEntity
 {
-    public int ClientCode { get; set; }
-
     public string ClientName { get; set; } = null!;
 
-    public decimal? CreditLimit { get; set; }
+    public decimal CreditLimit { get; set; }
 
-    public int? IdEmployeeFk { get; set; }
+    public int IdEmployeeFk { get; set; }
 
-    public int? IdContactFk { get; set; }
+    public int IdContactFk { get; set; }
 
-    public string? IdOfficeFk { get; set; }
+    public virtual Contact IdContactFkNavigation { get; set; }
 
-    public virtual Contact? IdContactFkNavigation { get; set; }
+    public virtual Employee IdEmployeeFkNavigation { get; set; }
 
-    public virtual Employee? IdEmployeeFkNavigation { get; set; }
-
-    public virtual Office? IdOfficeFkNavigation { get; set; }
-
-    public virtual ICollection<Location> Locations { get; set; } = new List<Location>();
+    public virtual ICollection<LocationClient> LocationClients { get; set; } = new List<LocationClient>();
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
