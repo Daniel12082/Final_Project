@@ -6,7 +6,7 @@ using Domain.Entities;
 
 namespace Domain.Interfaces
 {
-    public interface IBossRepository : IGenericRepository<Boss>
+    public interface IProveedor : IGeneric<Proveedor>
     {
         
     }

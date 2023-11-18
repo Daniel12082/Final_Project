@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 using System.Reflection;
 
-namespace Domain.Entities;
+namespace Persistence.Data;
 
 public partial class JardineriaContext : DbContext
 {

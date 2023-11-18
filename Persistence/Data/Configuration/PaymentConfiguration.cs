@@ -12,7 +12,7 @@ public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
 {
     public void Configure(EntityTypeBuilder<Payment> builder)
     {
-        builder.HasKey(e => e.TransactionId).HasName("PRIMARY");
+        builder.HasKey(e => e.Id).HasName("PRIMARY");
 
         builder.ToTable("payment");
 

@@ -5216,19 +5216,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yael Cano\\.nuget\\packages\\": {}
+    "C:\\Users\\sobri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Garden\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "C:\\Users\\Yael Cano\\Documents\\Garden\\Persistence\\Persistence.csproj",
-      "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yael Cano\\Documents\\Garden\\Persistence\\obj\\",
+      "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
+      "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5240,8 +5240,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Yael Cano\\Documents\\Garden\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Yael Cano\\Documents\\Garden\\Domain\\Domain.csproj"
+            "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj"
             }
           }
         }

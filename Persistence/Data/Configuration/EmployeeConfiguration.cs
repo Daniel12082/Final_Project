@@ -12,7 +12,7 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.HasKey(e => e.EmployeeCode).HasName("PRIMARY");
+            builder.HasKey(e => e.Id).HasName("PRIMARY");
 
             builder.ToTable("employee");
 
@@ -20,7 +20,7 @@ namespace Persistence.Data.Configuration
 
             builder.HasIndex(e => e.OfficeCode, "Fk_OfficeCodeFk");
 
-            builder.Property(e => e.EmployeeCode)
+            builder.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("employee_code");
             builder.Property(e => e.Email)

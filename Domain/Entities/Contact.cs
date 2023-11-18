@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public class Contact
+public class Contact : BaseEntity
 {
-    public int Id { get; set; }
 
     public string ContactName { get; set; } = null!;
 

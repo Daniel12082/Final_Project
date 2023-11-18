@@ -229,3 +229,6 @@ C:\Users\Yael Cano\Documents\Garden\API\obj\Debug\net7.0\refint\API.dll
 C:\Users\Yael Cano\Documents\Garden\API\obj\Debug\net7.0\API.pdb
 C:\Users\Yael Cano\Documents\Garden\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 C:\Users\Yael Cano\Documents\Garden\API\obj\Debug\net7.0\ref\API.dll
+C:\Users\sobri\Pictures\Final_Project\API\obj\Debug\net7.0\API.dll
+C:\Users\sobri\Pictures\Final_Project\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\sobri\Pictures\Final_Project\API\obj\Debug\net7.0\API.pdb

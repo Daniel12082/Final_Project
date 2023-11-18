@@ -49,3 +49,6 @@ C:\Users\Yael Cano\Documents\Garden\Application\obj\Debug\net7.0\Application.dll
 C:\Users\Yael Cano\Documents\Garden\Application\obj\Debug\net7.0\refint\Application.dll
 C:\Users\Yael Cano\Documents\Garden\Application\obj\Debug\net7.0\Application.pdb
 C:\Users\Yael Cano\Documents\Garden\Application\obj\Debug\net7.0\ref\Application.dll
+C:\Users\sobri\Pictures\Final_Project\Application\obj\Debug\net7.0\Application.dll
+C:\Users\sobri\Pictures\Final_Project\Application\obj\Debug\net7.0\refint\Application.dll
+C:\Users\sobri\Pictures\Final_Project\Application\obj\Debug\net7.0\Application.pdb

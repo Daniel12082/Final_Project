@@ -12,7 +12,7 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<OrderDetail> builder)
         {
-            builder.HasKey(e => new { e.OrderCode, e.ProductCode })
+            builder.HasKey(e => new { e.Id, e.ProductCode })
     .HasName("PRIMARY")
     .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
@@ -20,7 +20,7 @@ namespace Persistence.Data.Configuration
 
             builder.HasIndex(e => e.ProductCode, "Fk2_product_code");
 
-            builder.Property(e => e.OrderCode).HasColumnName("order_code");
+            builder.Property(e => e.Id).HasColumnName("order_code");
             builder.Property(e => e.ProductCode)
                 .HasMaxLength(15)
                 .HasColumnName("product_code");
@@ -31,7 +31,7 @@ namespace Persistence.Data.Configuration
                 .HasColumnName("unit_price");
 
             builder.HasOne(d => d.OrderCodeNavigation).WithMany(p => p.OrderDetails)
-                .HasForeignKey(d => d.OrderCode)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("Fk1_order_code");
 

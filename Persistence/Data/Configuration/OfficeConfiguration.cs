@@ -12,13 +12,13 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Office> builder)
         {
-            builder.HasKey(e => e.OfficeCode).HasName("PRIMARY");
+            builder.HasKey(e => e.Id).HasName("PRIMARY");
 
             builder.ToTable("office");
 
             builder.HasIndex(e => e.LocationOfficeFk, "fk_office_location_customer_copy11_idx");
 
-            builder.Property(e => e.OfficeCode)
+            builder.Property(e => e.Id)
                 .HasMaxLength(10)
                 .HasColumnName("office_code");
             builder.Property(e => e.LocationOfficeFk).HasColumnName("location_office_FK");
