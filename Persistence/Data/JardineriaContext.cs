@@ -50,9 +50,6 @@ public partial class JardineriaContext : DbContext
     public virtual DbSet<State> States { get; set; }
     public virtual DbSet<User> Users {get; set;}
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("server=localhost;user=root;password=1108;database=jardineria", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.35-mysql"));
-
    protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

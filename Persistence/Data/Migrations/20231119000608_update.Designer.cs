@@ -12,10 +12,14 @@ namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(JardineriaContext))]
 <<<<<<<< HEAD:Persistence/Data/Migrations/20231119000608_update.Designer.cs
+<<<<<<<< HEAD:Persistence/Data/Migrations/20231119000608_update.Designer.cs
     [Migration("20231119000608_update")]
 ========
     [Migration("20231119003406_update")]
 >>>>>>>> 8258a95f7c4fc8d8295b50b4d5583acbf0514e75:Persistence/Data/Migrations/20231119003406_update.Designer.cs
+========
+    [Migration("20231119003406_update")]
+>>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9:Persistence/Data/Migrations/20231119003406_update.Designer.cs
     partial class update
     {
         /// <inheritdoc />

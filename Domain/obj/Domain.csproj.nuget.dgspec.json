@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Domain\\Domain.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\DANIEL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DANIEL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -67,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

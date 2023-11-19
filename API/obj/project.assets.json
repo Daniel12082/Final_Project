@@ -6080,6 +6080,7 @@
     "net7.0": [
       "Application >= 1.0.0",
       "AspNetCoreRateLimit >= 5.0.0",
+      "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.12",
@@ -6091,11 +6092,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Yael Cano\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\DANIEL\\.nuget\\packages\\": {}
+>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\API\\API.csproj",
       "projectName": "API",
       "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\API\\API.csproj",
@@ -6104,6 +6110,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\Final_Project\\API\\API.csproj",
+      "projectName": "API",
+      "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\DANIEL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\API\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DANIEL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -6115,8 +6131,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Application\\Application.csproj"
+=======
+            "C:\\Users\\DANIEL\\Documents\\Final_Project\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Application\\Application.csproj"
+>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
             }
           }
         }
@@ -6134,6 +6155,10 @@
           "AspNetCoreRateLimit": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.1, )"
           },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -6189,7 +6214,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

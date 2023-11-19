@@ -117,10 +117,14 @@ namespace Persistence.Data.Migrations
                 constraints: table =>
                 {
 <<<<<<<< HEAD:Persistence/Data/Migrations/20231119000608_update.cs
+<<<<<<<< HEAD:Persistence/Data/Migrations/20231119000608_update.cs
                     table.PrimaryKey("Id", x => x.id);
 ========
                     table.PrimaryKey("PK_User", x => x.Id);
 >>>>>>>> 8258a95f7c4fc8d8295b50b4d5583acbf0514e75:Persistence/Data/Migrations/20231119003406_update.cs
+========
+                    table.PrimaryKey("PK_User", x => x.Id);
+>>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9:Persistence/Data/Migrations/20231119003406_update.cs
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

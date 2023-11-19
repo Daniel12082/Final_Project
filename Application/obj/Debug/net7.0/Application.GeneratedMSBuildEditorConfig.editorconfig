@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Application
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Yael Cano\Documents\Final_Project\Application\
+=======
+build_property.ProjectDir = C:\Users\DANIEL\Documents\Final_Project\Application\
+>>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
