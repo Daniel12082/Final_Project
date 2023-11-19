@@ -7,6 +7,10 @@ namespace API.Dto
 {
     public class ProveedorDto
     {
-        
+        public int Id { get; set; } 
+        public string Name { get; set; } = null!;
+        public int DentificationArd { get; set; }
+        public int Cellphone { get; set; }
+        public List<ProductDto> Products { get; set; } = new List<ProductDto>();
     }
 }

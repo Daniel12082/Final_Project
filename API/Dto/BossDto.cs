@@ -7,6 +7,9 @@ namespace API.Dto
 {
     public class BossDto
     {
-        
+                public string Name { get; set; } = null!;
+        public int? DentificationArd { get; set; }
+        public int? Cellphone { get; set; }
+        public List<EmployeeDto> Employees { get; set; } = new List<EmployeeDto>();
     }
 }

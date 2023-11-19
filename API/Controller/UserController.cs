@@ -7,7 +7,7 @@ using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Data;
 
-namespace API.Contoller
+namespace API.Controller
 {
     public class UserController: BaseController
     {

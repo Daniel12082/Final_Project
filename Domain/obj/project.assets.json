@@ -5045,19 +5045,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sobri\\.nuget\\packages\\": {}
+    "C:\\Users\\Yael Cano\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
