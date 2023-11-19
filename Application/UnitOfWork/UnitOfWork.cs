@@ -215,8 +215,8 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    public Task<int> SaveAsync()
+    public async Task<int> SaveAsync()
     {
-        throw new NotImplementedException();
+        return await _context.SaveChangesAsync();
     }
 }

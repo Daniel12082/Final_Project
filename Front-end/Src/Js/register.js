@@ -18,7 +18,7 @@
 		})
 })()
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("login-button").addEventListener("click", function(event) {
+    document.querySelector("form").addEventListener("submit", function(event) {
         event.preventDefault();
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             email: email,
             password: password
         };
-        const endpointUrl = "http://localhost:5019/user/login";
+        const endpointUrl = "http://localhost:5019/user/register";
         // Realizar la solicitud HTTP con los datos del formulario
         fetch(endpointUrl, {
                 method: 'POST',
@@ -37,17 +37,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 body: JSON.stringify(data),
             })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Contraseña o email incorrecto');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data === true) {
-                    window.location.href = "/index.html"; // Redirige si la respuesta es verdadera
+                if (response.status === 200) {
+                    window.location.href = "/index.html"; // Redirige si el registro es exitoso
+                } else if (response.status === 400) {
+                    throw new Error('El usuario ya está registrado');
                 } else {
-                    // Manejar el caso en el que la respuesta es falsa
-                    console.log("La respuesta del backend no es verdadera");
+                    throw new Error('Error al registrar usuario');
                 }
             })
             .catch(error => {

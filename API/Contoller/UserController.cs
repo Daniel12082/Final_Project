@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Dto;
+using AutoMapper;
 using Domain.Entities;
+using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Data;
 
@@ -12,46 +14,67 @@ namespace API.Contoller
     public class UserController: BaseController
     {
         private readonly JardineriaContext _dbContext;
-
-        public UserController(JardineriaContext dbContext)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+        public UserController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _dbContext = dbContext;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
-        public static User user = new User();
 
-        public ActionResult<User> Register(UserDto request)
+        [HttpPost("Register")]
+        public async Task<ActionResult<bool>> Register(UserDto request)
         {
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.password);
-            var newUser = new User
+            try
             {
-                email = request.email,
-                PasswordHash = passwordHash
-            };
+                var existingUser = await _unitOfWork.User.GetUserByEmailAsync(request.email);
 
-            _dbContext.Users.Add(newUser);
-            _dbContext.SaveChanges();
+                if (existingUser != null)
+                {
+                    BadRequest("El usuario ya está registrado");
+                }
 
-            return Ok("Bienvenido");
-        }
-        [HttpPost("login")]
-        public ActionResult<User> Login(UserDto request)
-        {
-            var user = _dbContext.Users.FirstOrDefault(u => u.email == request.email);
+                var newUser = new User
+                {
+                    email = request.email,
+                    PasswordHash = request.password
+                };
 
-            if (user == null)
-            {
-                return BadRequest("User not registered");
+                this._unitOfWork.User.Add(newUser);
+                await this._unitOfWork.SaveAsync();
+
+                return Ok(); // Devuelve true si el usuario se registra correctamente
             }
-
-            if (!BCrypt.Net.BCrypt.Verify(request.password, user.PasswordHash))
+            catch (Exception ex)
             {
-                return BadRequest("Incorrect password");
-            }
-            else
-            {
-                return Ok("Registro Exitoso");
+                // Manejo de errores
+                return StatusCode(500, false); // Envía falso en caso de error
             }
         }
-    }
+        
+        [HttpPost("Login")]
+        public async Task<bool> Login(UserDto request)
+        {
+            try
+            {
+                var userRepository = _unitOfWork.User;
+
+                var user = await userRepository.GetUserByEmailAsync(request.email);
+
+                if (user == null)
+                {
+                    return false;
+                }
+
+                bool passwordMatches=(request.password == user.PasswordHash);
+
+                return passwordMatches;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        }
 
 }
