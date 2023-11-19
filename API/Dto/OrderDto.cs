@@ -7,6 +7,7 @@ namespace API.Dto
 {
     public class OrderDto
     {
+        public int Id {get; set;}
         public DateOnly OrderDate { get; set; }
         public DateOnly ExpectedDate { get; set; }
         public DateOnly? DeliveryDate { get; set; }

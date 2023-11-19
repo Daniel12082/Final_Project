@@ -6092,25 +6092,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Yael Cano\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\DANIEL\\.nuget\\packages\\": {}
->>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\API\\API.csproj",
-      "projectName": "API",
-      "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Yael Cano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\API\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Yael Cano\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
       "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\Final_Project\\API\\API.csproj",
       "projectName": "API",
       "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\API\\API.csproj",
@@ -6119,7 +6105,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DANIEL\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -6131,13 +6116,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Yael Cano\\Documents\\Final_Project\\Application\\Application.csproj"
-=======
             "C:\\Users\\DANIEL\\Documents\\Final_Project\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Application\\Application.csproj"
->>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
             }
           }
         }
@@ -6217,5 +6197,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\DANIEL\\Documents\\Final_Project\\API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
