@@ -9,6 +9,7 @@ namespace Domain.Interfaces;
     public interface IUnitOfWork{
         IBoss Bosses { get; }
         ICity Cities {get;}
+        IClient Clients {get;}
         IContact Contacts {get;}
         ICountry Countries {get;}
         IEmployee Employee {get;}

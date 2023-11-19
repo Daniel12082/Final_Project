@@ -31,6 +31,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private IProveedor _proveedores;
     private IState _states;
     private IUser _user;
+    private IClient _clients;
     public IBoss Bosses {
         get
         {
@@ -212,6 +213,17 @@ public class UnitOfWork : IUnitOfWork, IDisposable
                 _user = new UserRepository(_context);
             }
             return _user;
+        }
+    }
+
+    public IClient Clients {
+        get
+        {
+            if (_clients == null)
+            {
+                _clients = new ClientRepository(_context);
+            }
+            return _clients;
         }
     }
 

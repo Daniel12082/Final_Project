@@ -7,6 +7,9 @@ namespace API.Dto
 {
     public class OfficeDto
     {
-        
+        public string Id {get; set;}
+        public string Phone { get; set; }
+
+        public int LocationOfficeFk { get; set; }
     }
 }
