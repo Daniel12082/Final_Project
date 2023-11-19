@@ -12,9 +12,10 @@ namespace Persistence.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasKey(e => e.Id).HasName("Id");
+            builder.HasKey(u => u.Id);
+            builder.Property(u => u.Id)
+            .ValueGeneratedOnAdd();
             builder.ToTable("User");
-            builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.email)
                 .HasMaxLength(50)
                 .HasColumnName("Email");
