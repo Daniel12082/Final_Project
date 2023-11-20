@@ -60,4 +60,4 @@ modeToggle.addEventListener("click", function () {
         applyDarkModeStyles();
         localStorage.setItem("mode", "dark");
     }
-});
+})
