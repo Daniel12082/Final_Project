@@ -18,7 +18,7 @@ namespace API.Extension
             {
                 builder.AllowAnyHeader() //WithOrigins("https://localhost:4200")
                 .AllowAnyMethod()   //WithMethods("GET", "POST", "PUT", "DELETE")
-                .WithOrigins("http://127.0.0.1:5500"); //WithHeaders("accept", "content-type", "origin", "x-custom-header");
+                .AllowAnyOrigin();
             });
         });
         public static void ConfigureRateLimiting(this IServiceCollection services)
