@@ -1,7 +1,6 @@
 using System.Reflection;
 using API.Extension;
 using AspNetCoreRateLimit;
-
 using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
 
@@ -14,7 +13,6 @@ builder.Services.ConfigureCors();
 builder.Services.AddAplicationServices();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 
 builder.Services.AddDbContext<JardineriaContext>(options =>
 {

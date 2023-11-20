@@ -7,6 +7,11 @@ namespace API.Dto
 {
     public class OrderDetailDto
     {
-        
+        public string ProductCode { get; set; } = null!;
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public short LineNumber { get; set; }
+        public OrderDto OrderCodeNavigation { get; set; } = null!;
+        public ProductDto ProductCodeNavigation { get; set; } = null!;
     }
 }
