@@ -46,6 +46,7 @@ namespace Api.Repository
         {
             return await _context.Set<T>().ToListAsync();
         }
+
         public virtual async Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize)
         {
             var totalRegistros = await _context.Set<T>().CountAsync();

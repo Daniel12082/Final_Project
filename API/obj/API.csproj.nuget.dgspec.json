@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\corvus\\Desktop\\Final_Project\\API\\API.csproj": {}
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\corvus\\Desktop\\Final_Project\\API\\API.csproj": {
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\corvus\\Desktop\\Final_Project\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\API\\obj\\",
+        "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\corvus\\Desktop\\Final_Project\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Application\\Application.csproj"
+              "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj"
               }
             }
           }
@@ -104,21 +104,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\corvus\\Desktop\\Final_Project\\Application\\Application.csproj": {
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\corvus\\Desktop\\Final_Project\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Application\\obj\\",
+        "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -130,11 +130,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj"
+              "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj"
+              "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -164,21 +164,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj": {
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -231,21 +231,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -257,8 +257,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj"
+              "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj"
               }
             }
           }
@@ -298,7 +298,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

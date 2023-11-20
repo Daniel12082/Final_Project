@@ -5045,19 +5045,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\corvus\\.nuget\\packages\\": {}
+    "C:\\Users\\sobri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5110,7 +5110,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

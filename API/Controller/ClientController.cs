@@ -26,7 +26,7 @@ public class ClientController: BaseController
         public async Task<ActionResult<IEnumerable<Client>>> Get()
         {
             var entidades = await _unitOfWork.Clients.GetAllAsync();
-            return _mapper.Map<List<Client>>(entidades);
+            return Ok(_mapper.Map<IEnumerable<Client>>(entidades));
         }
 
         [HttpGet("{id}")]
