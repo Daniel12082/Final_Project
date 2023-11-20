@@ -5216,19 +5216,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DANIEL\\.nuget\\packages\\": {}
+    "C:\\Users\\corvus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Persistence\\Persistence.csproj",
-      "packagesPath": "C:\\Users\\DANIEL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Persistence\\obj\\",
+      "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\Persistence.csproj",
+      "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DANIEL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5240,8 +5240,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\DANIEL\\Documents\\Final_Project\\Domain\\Domain.csproj"
+            "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\corvus\\Desktop\\Final_Project\\Domain\\Domain.csproj"
             }
           }
         }
@@ -5281,16 +5281,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\DANIEL\\Documents\\Final_Project\\Persistence\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
