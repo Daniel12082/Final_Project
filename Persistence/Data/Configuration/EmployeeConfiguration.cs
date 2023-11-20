@@ -47,7 +47,6 @@ namespace Persistence.Data.Configuration
 
             builder.HasOne(d => d.IdBossFkNavigation).WithMany(p => p.Employees)
                 .HasForeignKey(d => d.IdBossFk)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("Fk_IdBossFk");
 
             builder.HasOne(d => d.OfficeCodeNavigation).WithMany(p => p.Employees)
