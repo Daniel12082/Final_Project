@@ -1,9 +1,10 @@
 const entitiesDropdown = document.getElementById('entitiesDropdown');
 const entityQueriesDropdown = document.getElementById('entityQueriesDropdown');
+let selectedEntity;
 let selectedQueryId = null; // Variable para almacenar el ID seleccionado
 
-entitiesDropdown.addEventListener('change', function() {
-    const selectedEntity = entitiesDropdown.value;
+entitiesDropdown.addEventListener("click", function() {
+    selectedEntity = entitiesDropdown.value;
     console.log(selectedEntity)
     // Lógica para cargar las opciones según la entidad seleccionada
     let options = [];
@@ -14,7 +15,7 @@ entitiesDropdown.addEventListener('change', function() {
             case 'employee':
                 options = ['Codigo del jefe nro 7', 'Cargos', 'No son representante de ventas','Nombre de sus jefes','Jefe y jefe de su jefe','Sin oficina','Sin clientes','Sin clientes y los datos de su oficina','Sin oficina y sin clientes','Sin clientes y su jefe','Empleados totales','Nombre de los represena de ventay cuantos clientes tiene','Empleados que estan a cargo de ------','Datos de Empleados que no representan clientes'];
                 break;
-            case 'office':
+            case 'Office':
                 options = ['Ciudad donde estan ubicadas', 'Ubicado en españa y sus telefonos', 'Direcciones que tengan clientes en ---------','Sin empleados que hayan sido los representantes de ventas de algún cliente que haya realizado la compra de algún producto de la gama Frutales','Nombre de empleados que no sean  representante de ventas','Ciudades y numero de empleados'];
                 break;
             case 'order':
@@ -30,7 +31,9 @@ entitiesDropdown.addEventListener('change', function() {
                 options = ['Default Option 1', 'Default Option 2', 'Default Option 3'];
                 break;
         }
-
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
     // Limpiar opciones actuales del segundo dropdown
     entityQueriesDropdown.innerHTML = '';
 
@@ -39,6 +42,8 @@ entitiesDropdown.addEventListener('change', function() {
         const option = document.createElement('option');
         option.text = optionText;
         entityQueriesDropdown.add(option);
+
+        
     });
 });
 entityQueriesDropdown.addEventListener('change', function() {
@@ -47,3 +52,61 @@ entityQueriesDropdown.addEventListener('change', function() {
     console.log(selectedQueryId);
     // ... Realizar otras acciones con el índice seleccionado ...
 });
+entityQueriesDropdown.addEventListener('change', function() {
+    const selectedIndex = entityQueriesDropdown.selectedIndex;
+    selectedQueryId = selectedIndex + 1;
+    console.log(selectedQueryId);
+
+    // Realizar el fetch usando el valor del selectedQueryId
+    if (selectedQueryId ==""&& selectedEntity ==""){
+        url =`http://localhost:5019/Client/1`
+    }else{
+    let url = `http://localhost:5019/${selectedEntity}/${selectedQueryId}`;
+    console.log(url)
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            renderTable(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            // Manejar errores
+        });
+}});
+
+// Función para renderizar la tabla con los datos obtenidos
+function renderTable(data) {
+    const table = document.getElementById('example');
+    table.innerHTML = ''; // Limpiar la tabla
+
+    if (data.length === 0) {
+        table.innerHTML = '<p>No hay datos disponibles</p>';
+        return;
+    }
+
+    // Crear el encabezado de la tabla
+    const thead = document.createElement('thead');
+    const headRow = document.createElement('tr');
+    const headers = Object.keys(data[0]); // Obtener nombres de campos desde los datos
+
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    // Crear el cuerpo de la tabla con los datos
+    const tbody = document.createElement('tbody');
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        headers.forEach(header => {
+            const cell = document.createElement('td');
+            cell.textContent = item[header];
+            row.appendChild(cell);
+        });
+        tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+}

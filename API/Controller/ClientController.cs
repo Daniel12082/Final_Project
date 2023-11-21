@@ -29,64 +29,32 @@ public class ClientController: BaseController
             return Ok(_mapper.Map<IEnumerable<Client>>(entidades));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{consulting}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ClientDto>> Get(int id)
+        public async Task<ActionResult<OfficeDto>> Get(int consulting)
         {
-            var entidad = await _unitOfWork.Clients.GetByIdAsync(id);
-            if(entidad == null)
+            switch (consulting)
             {
-                return NotFound();
-            }
-            return _mapper.Map<ClientDto>(entidad);
-        }
+                case 1:
+                    var office = await _unitOfWork.Clients.GetCitiesOfSpain();
+                    return Ok(office);
 
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Client>> Post(ClientDto ClientDto)
-        {
-            var entidad = _mapper.Map<Client>(ClientDto);
-            this._unitOfWork.Clients.Add(entidad);
-            await _unitOfWork.SaveAsync();
-            if(entidad == null)
-            {
-                return BadRequest();
+                case 2:
+                    var office2 = await _unitOfWork.Clients.GetClientsWithPaymentsIn2008();
+                    return Ok(office2);
+                case 3:
+                    var office3 = await _unitOfWork.Clients.GetClientsMadridRepresent();
+                    return Ok(office3);
+                case 4:
+                    var office4 = await _unitOfWork.Clients.GetClientAndRepresent();
+                    return Ok(office4);
+                case 5:
+                    var office5 = await _unitOfWork.Clients.GetClientWithOutPayAndRepresent();
+                    return Ok(office5);
+                default:
+                    return BadRequest("Consulta no válida");
             }
-            ClientDto.Id = entidad.Id;
-            return CreatedAtAction(nameof(Post), new {id = ClientDto.Id}, ClientDto);
-        }
-
-        [HttpPut("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ClientDto>> Put(int id, [FromBody] ClientDto ClientDto)
-        {
-            if(ClientDto == null)
-            {
-                return NotFound();
-            }
-            var entidades = _mapper.Map<Client>(ClientDto);
-            _unitOfWork.Clients.Update(entidades);
-            await _unitOfWork.SaveAsync();
-            return ClientDto;
-        }
-
-        [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var entidad = await _unitOfWork.Clients.GetByIdAsync(id);
-            if(entidad == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.Clients.Delete(entidad);
-            await _unitOfWork.SaveAsync();
-            return NoContent();
         }
     }
