@@ -26,5 +26,33 @@ namespace Application.Repository
 
             return Task.FromResult((IEnumerable<object>)stock.Cast<object>());
         }
+
+        public Task<IEnumerable<object>> GetProductLine_Client_Products()
+            {
+                var productLinesByClient = _context.Products
+                    .Join(_context.OrderDetails, p => p.ProductCode, od => od.ProductCode, (p, od) => new { p.ProductLine, od.Id})
+                    .Join(_context.Orders, od => od.Id, o => o.Id, (od, o) => new { od.ProductLine, o.ClientCode })
+                    .Join(_context.Clients, o => o.ClientCode, c => c.Id, (o, c) => new { c.Id, c.ClientName, o.ProductLine })
+                    .GroupBy(x => new { x.Id, x.ClientName })
+                    .Select(group => new
+                    {
+                        ClientCode = group.Key.Id,
+                        ClientName = group.Key.ClientName,
+                        ProductLines = group.Select(x => x.ProductLine).Distinct().ToList()
+                    })
+                    .ToList();
+
+                return Task.FromResult((IEnumerable<object>)productLinesByClient.Cast<object>());
+            }
+        
+        public Task<IEnumerable<object>> GetNotBuy_Products()
+        {
+            var notBuy = _context.Products
+                .Where(x => !_context.OrderDetails.Any(od => od.ProductCode == x.ProductCode))
+                .Select(x => new { x.ProductCode, x.Name, x.ProductLine })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)notBuy.Cast<object>());
+        }
     }
 }
