@@ -73,16 +73,20 @@ namespace Application.Repository
     }
     public async Task<IEnumerable<object>> GetNotFrutales_Offices()
     {
-        return await (from office in _context.Offices
-                join employee in _context.Employees on office.Id equals employee.OfficeCode
-                join client in _context.Clients on employee.Id equals client.IdEmployeeFk
-                join order in _context.Orders on client.Id equals order.ClientCode
-                join detailOrder in _context.OrderDetails on order.Id equals detailOrder.Id
-                join product in _context.Products on detailOrder.ProductCode equals product.Id
-                where product.ProductLine != "Frutales"
-                select new { OfficeId = office.Id})
-                .ToListAsync();
-                //Lista las oficinas que no tengan clientes que hayan comprado productos de la categoría Frutales
+        return await (
+            from office in _context.Offices
+            where !_context.Clients.Any(client =>
+                _context.Employees.Any(employee => employee.OfficeCode == office.Id && employee.Id == client.IdEmployeeFk) &&
+                _context.Orders.Any(order => order.ClientCode == client.Id) &&
+                _context.OrderDetails.Any(detailOrder =>
+                    _context.Products.Any(product => product.Id == detailOrder.ProductCode && product.ProductLine == "Frutales") &&
+                    detailOrder.Id == client.Id  // Corregir aquí: Utilizar la relación entre OrderDetail y Order
+                )
+            )
+            select new { OfficeId = office.Id }
+        ).ToListAsync();
+        // Lista las oficinas que no han vendido productos de la categoría Frutales a ningún cliente
     }
+
     }
 }
