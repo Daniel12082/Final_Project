@@ -42,6 +42,7 @@ public class BossController: BaseController
             }
             return _mapper.Map<BossDto>(entidad);
         }
+        
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
