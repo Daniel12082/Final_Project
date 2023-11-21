@@ -10,5 +10,6 @@ namespace Domain.Interfaces
     public interface IProduct : IGenericString<Product>
     {
         Task<IEnumerable<object>> GetStock_Products();
+        Task<IEnumerable<object>> GetProductLine_Client_Products();
     }
 }

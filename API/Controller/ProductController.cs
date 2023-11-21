@@ -56,6 +56,10 @@ public class ProductController: BaseController
                     var Product = await _unitOfWork.Products.GetStock_Products();
                     return Ok(Product);
 
+                case 2:
+                    var Product2 = await _unitOfWork.Products.GetProductLine_Client_Products();
+                    return Ok(Product2);
+
                 default:
                     return BadRequest("Consulta no válida");
             }
