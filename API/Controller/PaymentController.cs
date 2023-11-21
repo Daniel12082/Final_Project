@@ -43,7 +43,7 @@ public class PaymentController: BaseController
                     var order = await _unitOfWork.Payment.GetPayments();
                     return Ok(order);
                 case 2:
-                    var order2 = await _unitOfWork.Payment.GetMethods();
+                    var order2 = await _unitOfWork.Payment.GetUniquePaymentMethods();
                     return Ok(order2);
                 default:
                     return BadRequest("Consulta no válida");

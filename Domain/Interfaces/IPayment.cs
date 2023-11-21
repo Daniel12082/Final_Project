@@ -10,6 +10,6 @@ namespace Domain.Interfaces
     public interface IPayment : IGenericString<Payment>
     {
         Task<IEnumerable<object>> GetPayments();
-        Task<IEnumerable<string>> GetMethods();
+        Task<IEnumerable<object>> GetUniquePaymentMethods();
     }
 }

@@ -33,15 +33,16 @@ namespace Application.Repository
                 p.ClientCode
             });
         }
-        public async Task<IEnumerable<string>> GetMethods()
-        {
-            var uniquePaymentMethods = await _context.Payments
-                .Select(p => p.PaymentMethod)
-                .Distinct()
-                .ToListAsync();
+        public async Task<IEnumerable<object>> GetUniquePaymentMethods()
+{
+    var uniquePaymentMethods = await _context.Payments
+        .Select(p => p.PaymentMethod)
+        .Distinct()
+        .ToListAsync();
 
-            return uniquePaymentMethods;
-        }
+    return uniquePaymentMethods.Select(method => new { PaymentMethod = method });
+}
+
 }
 }
 
