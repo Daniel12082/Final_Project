@@ -30,7 +30,7 @@ public class ProductController: BaseController
             return _mapper.Map<List<Product>>(entidades);
         }
 
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -42,6 +42,23 @@ public class ProductController: BaseController
                 return NotFound();
             }
             return _mapper.Map<ProductDto>(entidad);
+        }*/
+
+        [HttpGet("{consulting}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ProductDto>> Get(int consulting)
+        {
+            switch (consulting)
+            {
+                case 1:
+                    var Product = await _unitOfWork.Products.GetStock_Products();
+                    return Ok(Product);
+
+                default:
+                    return BadRequest("Consulta no válida");
+            }
         }
 
         [HttpPost]
