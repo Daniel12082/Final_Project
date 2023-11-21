@@ -31,64 +31,22 @@ public class PaymentController: BaseController
             return _mapper.Map<List<Payment>>(entidades);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{consulting}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<PaymentDto>> Get(int id)
+        public async Task<ActionResult<PaymentDto>> Get(int consulting)
         {
-            var entidad = await _unitOfWork.Payment.GetByIdAsync(id);
-            if(entidad == null)
+            switch (consulting)
             {
-                return NotFound();
+                case 1:
+                    var order = await _unitOfWork.Payment.GetPayments();
+                    return Ok(order);
+                case 2:
+                    var order2 = await _unitOfWork.Payment.GetMethods();
+                    return Ok(order2);
+                default:
+                    return BadRequest("Consulta no válida");
             }
-            return _mapper.Map<PaymentDto>(entidad);
-        }
-
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Payment>> Post(PaymentDto PaymentDto)
-        {
-            var entidad = _mapper.Map<Payment>(PaymentDto);
-            this._unitOfWork.Payment.Add(entidad);
-            await _unitOfWork.SaveAsync();
-            if(entidad == null)
-            {
-                return BadRequest();
-            }
-            PaymentDto.Id = entidad.Id;
-            return CreatedAtAction(nameof(Post), new {id = PaymentDto.Id}, PaymentDto);
-        }
-
-        [HttpPut("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<PaymentDto>> Put(int id, [FromBody] PaymentDto PaymentDto)
-        {
-            if(PaymentDto == null)
-            {
-                return NotFound();
-            }
-            var entidades = _mapper.Map<Payment>(PaymentDto);
-            _unitOfWork.Payment.Update(entidades);
-            await _unitOfWork.SaveAsync();
-            return PaymentDto;
-        }
-
-        [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var entidad = await _unitOfWork.Payment.GetByIdAsync(id);
-            if(entidad == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.Payment.Delete(entidad);
-            await _unitOfWork.SaveAsync();
-            return NoContent();
         }
     }
