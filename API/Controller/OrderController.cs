@@ -56,6 +56,14 @@ public class OrderController: BaseController
                     var order = await _unitOfWork.Orders.GetStatus_Order();
                     return Ok(order);
 
+                case 2:
+                    var order2 = await _unitOfWork.Orders.GetDelayed_Order();
+                    return Ok(order2);
+
+                case 3:
+                    var order3 = await _unitOfWork.Orders.GetAdvanced_Order();
+                    return Ok(order3);
+
                 default:
                     return BadRequest("Consulta no válida");
             }
