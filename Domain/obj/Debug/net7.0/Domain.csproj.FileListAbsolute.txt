@@ -73,3 +73,15 @@ C:\Users\DANIEL\Documents\Final_Project\Domain\obj\Debug\net7.0\refint\Domain.dl
 C:\Users\DANIEL\Documents\Final_Project\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\DANIEL\Documents\Final_Project\Domain\obj\Debug\net7.0\ref\Domain.dll
 >>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Domain\obj\Debug\net7.0\ref\Domain.dll

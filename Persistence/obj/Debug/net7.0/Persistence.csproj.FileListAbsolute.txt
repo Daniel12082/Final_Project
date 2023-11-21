@@ -46,3 +46,18 @@ C:\Users\DANIEL\Documents\Final_Project\Persistence\obj\Debug\net7.0\refint\Pers
 C:\Users\DANIEL\Documents\Final_Project\Persistence\obj\Debug\net7.0\Persistence.pdb
 C:\Users\DANIEL\Documents\Final_Project\Persistence\obj\Debug\net7.0\ref\Persistence.dll
 >>>>>>> 4174d36112bdd7866ac154e1465a52913a53c6f9
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\bin\Debug\net7.0\Persistence.deps.json
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\bin\Debug\net7.0\Persistence.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\bin\Debug\net7.0\Persistence.pdb
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\bin\Debug\net7.0\Domain.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\bin\Debug\net7.0\Domain.pdb
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\refint\Persistence.dll
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\Persistence.pdb
+C:\Users\ferch\OneDrive\Escritorio\Campus\.NetCore\ejercicios\Final_Project\Persistence\obj\Debug\net7.0\ref\Persistence.dll
