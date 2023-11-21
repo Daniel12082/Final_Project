@@ -19,7 +19,7 @@ entitiesDropdown.addEventListener("click", function() {
                 options = ['Ciudad donde estan ubicadas', 'Ubicado en españa y sus telefonos', 'Direcciones que tengan clientes en ---------','Sin empleados que hayan sido los representantes de ventas de algún cliente que haya realizado la compra de algún producto de la gama Frutales','Nombre de empleados que no sean  representante de ventas','Ciudades y numero de empleados'];
                 break;
             case 'order':
-                options = ['Estados de un pedido', 'Codigo del pedido,cliente, fecha de espera y fecha de entrega', 'Codigo,Cliente,Fecha de espera y fecha de entrega de los pedidos cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.','Estado rechazados','Pedido entregado en meses de enero'];
+                options = ['Estados de un pedido', 'Codigo del pedido,cliente, fecha de espera y fecha de entrega', 'Codigo,Cliente,Fecha de espera y fecha de entrega de los pedidos cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.','Estado rechazados','Pedido entregado en meses de enero','Cantidad segun estado'];
                 break;
             case 'payment':
                 options = ['Pagos del 2008 por Paypal', 'Formas de pago'];
