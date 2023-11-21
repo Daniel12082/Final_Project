@@ -11,5 +11,9 @@ namespace Domain.Interfaces
     {
         Task<IEnumerable<object>> GetCities_Offices();
         Task<IEnumerable<object>> GetPais_Cities_Offices();
+        Task<IEnumerable<object>> GetClient_Offices();
+        Task<IEnumerable<object>> GetNotFrutales_Offices();
+        Task<IEnumerable<object>> GetNotClient_Offices();
+        Task<IEnumerable<object>> GetCities_Employees_Offices();
     }
 }
