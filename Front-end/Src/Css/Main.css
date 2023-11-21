@@ -322,6 +322,10 @@ nav.close ~ .dashboard .top{
     margin:3%;
     background-color: var(--primary-color);
 }
+#button{
+    margin:3%;
+    background-color: var(--primary-color);
+}
 .boxes .box .text{
     white-space: nowrap;
     font-size: 18px;
