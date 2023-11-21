@@ -44,5 +44,15 @@ namespace Application.Repository
 
                 return Task.FromResult((IEnumerable<object>)productLinesByClient.Cast<object>());
             }
+        
+        public Task<IEnumerable<object>> GetNotBuy_Products()
+        {
+            var notBuy = _context.Products
+                .Where(x => !_context.OrderDetails.Any(od => od.ProductCode == x.ProductCode))
+                .Select(x => new { x.ProductCode, x.Name, x.ProductLine })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)notBuy.Cast<object>());
+        }
     }
 }
