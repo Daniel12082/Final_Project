@@ -18,13 +18,13 @@ public partial class Employee : BaseEntity
 
     public string OfficeCode { get; set; } = null!;
 
-    public int IdBossFk { get; set; }
+    public int? IdBossFk { get; set; }
 
     public string Position { get; set; }
 
     public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
 
-    public virtual Boss IdBossFkNavigation { get; set; } = null!;
+    public virtual Boss IdBossFkNavigation { get; set; }
 
     public virtual Office OfficeCodeNavigation { get; set; } = null!;
 }

@@ -44,10 +44,15 @@ namespace Persistence.Data.Configuration
             builder.Property(e => e.Position)
                 .HasMaxLength(50)
                 .HasColumnName("position");
-
-            builder.HasOne(d => d.IdBossFkNavigation).WithMany(p => p.Employees)
+            builder.HasOne(d => d.IdBossFkNavigation)
+                .WithMany(p => p.Employees)
                 .HasForeignKey(d => d.IdBossFk)
-                .HasConstraintName("Fk_IdBossFk");
+                .HasConstraintName("Fk_IdBossFk")
+                .OnDelete(DeleteBehavior.Restrict); // Evita la eliminación en cascada si se intenta establecer en null
+
+            builder.Property(e => e.IdBossFk)
+                .IsRequired(false); // Esto permite valores nulos para IdBossFk en la base de datos
+
 
             builder.HasOne(d => d.OfficeCodeNavigation).WithMany(p => p.Employees)
                 .HasForeignKey(d => d.OfficeCode)

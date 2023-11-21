@@ -283,7 +283,7 @@ namespace Persistence.Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     office_code = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    IdBossFk = table.Column<int>(type: "int", nullable: false),
+                    IdBossFk = table.Column<int>(type: "int", nullable: true),
                     position = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
@@ -295,7 +295,7 @@ namespace Persistence.Data.Migrations
                         column: x => x.IdBossFk,
                         principalTable: "boss",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "Fk_OfficeCodeFk",
                         column: x => x.office_code,

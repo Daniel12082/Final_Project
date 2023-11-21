@@ -11,7 +11,7 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(JardineriaContext))]
-    [Migration("20231120214340_update")]
+    [Migration("20231121001724_update")]
     partial class update
     {
         /// <inheritdoc />
@@ -176,7 +176,7 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("first_name");
 
-                    b.Property<int>("IdBossFk")
+                    b.Property<int?>("IdBossFk")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName1")
@@ -703,8 +703,7 @@ namespace Persistence.Data.Migrations
                     b.HasOne("Domain.Entities.Boss", "IdBossFkNavigation")
                         .WithMany("Employees")
                         .HasForeignKey("IdBossFk")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
+                        .OnDelete(DeleteBehavior.Restrict)
                         .HasConstraintName("Fk_IdBossFk");
 
                     b.HasOne("Domain.Entities.Office", "OfficeCodeNavigation")

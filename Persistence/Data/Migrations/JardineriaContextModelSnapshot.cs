@@ -173,7 +173,7 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("first_name");
 
-                    b.Property<int>("IdBossFk")
+                    b.Property<int?>("IdBossFk")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName1")
@@ -700,8 +700,7 @@ namespace Persistence.Data.Migrations
                     b.HasOne("Domain.Entities.Boss", "IdBossFkNavigation")
                         .WithMany("Employees")
                         .HasForeignKey("IdBossFk")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
+                        .OnDelete(DeleteBehavior.Restrict)
                         .HasConstraintName("Fk_IdBossFk");
 
                     b.HasOne("Domain.Entities.Office", "OfficeCodeNavigation")
