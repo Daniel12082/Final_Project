@@ -9,6 +9,7 @@ namespace Domain.Interfaces
 {
     public interface IOffice : IGenericString<Office>
     {
-        
+        Task<IEnumerable<object>> GetCities_Offices();
+        Task<IEnumerable<object>> GetPais_Cities_Offices();
     }
 }

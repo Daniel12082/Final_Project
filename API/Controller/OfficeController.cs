@@ -29,7 +29,7 @@ public class OfficeController: BaseController
             return _mapper.Map<List<Office>>(entidades);
         }
 
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -41,6 +41,29 @@ public class OfficeController: BaseController
                 return NotFound();
             }
             return _mapper.Map<OfficeDto>(entidad);
+        }*/
+
+        [HttpGet("{consulting}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<OfficeDto>> Get(int consulting)
+        {
+            switch (consulting)
+            {
+                case 1:
+                    var office = await _unitOfWork.Offices.GetCities_Offices();
+                    return Ok(office);
+
+                case 2:
+                    var office2 = await _unitOfWork.Offices.GetPais_Cities_Offices();
+                    return Ok(office2);
+
+                // Agrega más casos según sea necesario
+
+                default:
+                    return BadRequest("Consulta no válida");
+            }
         }
 
         [HttpPost]
