@@ -8,9 +8,9 @@ using Persistence.Data;
 
 namespace Application.Repository
 {
-    public class ProveedorRepository : GenericRepository<Proveedor>, IProveedor
+    public class ProviderRepository : GenericRepository<Provider>, IProvider
     {
-        public ProveedorRepository(JardineriaContext context) : base(context)
+        public ProviderRepository(JardineriaContext context) : base(context)
     {
     }
     }

@@ -28,7 +28,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private IPayment _payment;
     private IProduct _products;
     private IProductLine _productLines;
-    private IProveedor _proveedores;
+    private IProvider _providers;
     private IState _states;
     private IUser _user;
     private IClient _clients;
@@ -169,15 +169,15 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     
     }
 
-    public IProveedor Proveedores 
+    public IProvider Providers
     {
         get
         {
-            if (_proveedores == null)
+            if (_providers == null)
             {
-                _proveedores = new ProveedorRepository(_context);
+                _providers = new ProviderRepository(_context);
             }
-            return _proveedores;
+            return _providers;
         }
     
     }

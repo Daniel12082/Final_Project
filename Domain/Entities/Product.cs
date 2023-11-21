@@ -24,7 +24,7 @@ public partial class Product : BaseEntityString
 
     public int IdProviderFk { get; set; }
 
-    public virtual Proveedor IdProviderFkNavigation { get; set; }
+    public virtual Provider IdProviderFkNavigation { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 

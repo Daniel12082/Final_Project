@@ -27,7 +27,7 @@ namespace API.Profiles
             CreateMap<Payment, PaymentDto>().ReverseMap();
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<ProductLine, ProductLineDto>().ReverseMap();
-            CreateMap<Proveedor, ProveedorDto>().ReverseMap();
+            CreateMap<Provider, ProviderDto>().ReverseMap();
             CreateMap<State, StateDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
         }

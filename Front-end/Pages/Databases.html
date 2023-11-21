@@ -120,40 +120,32 @@ src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
                     <span class="text">Data Base</span>
                 </div>
                 <div class="card-body">
+                    <select id="entitiesDropdown">
+                        <option value="boss">Boss</option>
+                        <option value="city">City</option>
+                        <option value="client">Client</option>
+                        <option value="contact">Contact</option>
+                        <option value="country">Country</option>
+                        <option value="employee">Employee</option>
+                        <option value="office">Office</option>
+                        <option value="order">Order</option>
+                        <option value="payment">Payment</option>
+                        <option value="product">Product</option>
+                        <option value="provider">Provider</option>
+                        <option value="state">State</option>
+                    </select>
+                    
+                    <select id="entityQueriesDropdown">
+                        <!-- Options for entity queries will be populated dynamically -->
+                    </select>
                     <table id="example" class="table table-striped" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>$320,800</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 	<script src="../Field/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../Src/Js/table.js"></script>
+    <script src="../Src/Js/consulting.js"></script>
 	<script src="../Src/Js/app.js"></script>
-    <script> 
-        /* Initialization of datatables */ 
-        $(document).ready(function () { 
-            $('#example').DataTable(); 
-        }); 
-    </script> 
 </body>
 </html>

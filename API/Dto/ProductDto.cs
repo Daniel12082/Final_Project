@@ -18,7 +18,7 @@ namespace API.Dto
         public decimal SellingPrice { get; set; }
         public decimal SupplierPrice { get; set; }
         public int IdProviderFk { get; set; }
-        public ProveedorDto IdProviderFkNavigation { get; set; }
+        public ProviderDto IdProviderFkNavigation { get; set; }
         public List<OrderDetailDto> OrderDetails { get; set; } = new List<OrderDetailDto>();
         public ProductLineDto ProductLineNavigation { get; set; } = null!;
     }
