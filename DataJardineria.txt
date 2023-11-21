@@ -100,7 +100,10 @@ INSERT INTO employee (employee_code,first_name,last_name1,last_name2,extension,e
 	 (27,'Sara','Gómez','López','3636','sara@example.com','OF-10',14,'Representante Ventas'),
 	 (28,'Luis','López','Hernández','3737','luis@example.com','OF-7',11,'Representante Ventas'),
 	 (29,'Carmen','Martínez','Sánchez','3838','carmen@example.com','OF-7',11,'Representante Ventas'),
-	 (30,'Pedro','Sánchez','Gómez','3939','pedro@example.com','OF-7',11,'Representante Ventas');
+	 (30,'Pedro','Sánchez','Gómez','3939','pedro@example.com','OF-7',11,'Representante Ventas'),
+     (31,'Laura','Castro','Pérez','2425','laura2@example.com','OF-1',5,'Representante Ventas'),
+     (32,'Isabel','Gamboa','Martínez','3233','isabel2@example.com','OF-6',10,'Representante Ventas'),
+     (33,'Carmen','Torres','Sánchez','3839','carmen2@example.com','OF-7',11,'Representante Ventas');
 INSERT INTO contact (id,contact_name,contact_last_name,contact_numbrer,fax) VALUES
 	 (1,'Emily','Davis','789012345','543210987'),
 	 (2,'Alex','Wilson','234567890','678901234'),

@@ -67,6 +67,14 @@ public class OfficeController: BaseController
                     var office4 = await _unitOfWork.Offices.GetNotFrutales_Offices();
                     return Ok(office4);
 
+                case 5:
+                    var office5 = await _unitOfWork.Offices.GetNotClient_Offices();
+                    return Ok(office5);
+
+                case 6:
+                    var office6 = await _unitOfWork.Offices.GetCities_Employees_Offices();
+                    return Ok(office6);
+
                 default:
                     return BadRequest("Consulta no válida");
             }

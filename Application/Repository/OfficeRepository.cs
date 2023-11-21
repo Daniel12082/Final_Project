@@ -50,7 +50,6 @@ namespace Application.Repository
                 join locationOffice in _context.LocationOffices on office.LocationOfficeFk equals locationOffice.Id                
                 select new { OfficeId = employee.OfficeCode, OfficeAddress = GetFormattedAddress(locationOffice), NameClient = client.ClientName, CityName = city.Name })
                 .ToListAsync();
-                //Lista la dirección de las oficinas que tengan clientes en Fuenlabrada
     }
     private static string GetFormattedAddress(LocationOffice locationOffice)
     {
@@ -80,13 +79,38 @@ namespace Application.Repository
                 _context.Orders.Any(order => order.ClientCode == client.Id) &&
                 _context.OrderDetails.Any(detailOrder =>
                     _context.Products.Any(product => product.Id == detailOrder.ProductCode && product.ProductLine == "Frutales") &&
-                    detailOrder.Id == client.Id  // Corregir aquí: Utilizar la relación entre OrderDetail y Order
+                    detailOrder.Id == client.Id
                 )
             )
             select new { OfficeId = office.Id }
         ).ToListAsync();
-        // Lista las oficinas que no han vendido productos de la categoría Frutales a ningún cliente
     }
-
+    public async Task<IEnumerable<object>> GetNotClient_Offices()
+    {
+        return await (
+            from employee in _context.Employees
+            where !_context.Clients.Any(client =>
+                client.IdEmployeeFk == employee.Id
+            ) && employee.Position == "Representante Ventas"
+            join office in _context.Offices on employee.OfficeCode equals office.Id
+            select new { EmployeeId = employee.Id , EmployeeName = employee.FirstName , EmployeeF1 = employee.LastName1 , EmployeeF2 = employee.LastName2 , EmployeePosition = employee.Position, OfficeCode = employee.OfficeCode , OfficeNumber = office.Phone}
+        ).ToListAsync();
+    }	
+    public async Task<IEnumerable<object>> GetCities_Employees_Offices()
+    {
+        return await (
+            from employee in _context.Employees
+            join office in _context.Offices on employee.OfficeCode equals office.Id
+            join locationOffice in _context.LocationOffices on office.LocationOfficeFk equals locationOffice.Id
+            join city in _context.Cities on locationOffice.IdCityFk equals city.Id
+            group new { employee, office, locationOffice, city } by new { city.Id, city.Name, OfficeId = office.Id } into groupedData
+            select new
+            {
+                CityName = groupedData.Key.Name,
+                OfficeId = groupedData.Key.OfficeId,
+                EmployeeCount = groupedData.Count()
+            }
+        ).ToListAsync();
+    }
     }
 }
