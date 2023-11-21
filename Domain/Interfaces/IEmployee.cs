@@ -20,6 +20,8 @@ namespace Domain.Interfaces
         Task<IEnumerable<object>> GetEmployeesWithoutClients();
         Task<IEnumerable<object>> GetEmployeesUnderPatriciaGomezHernandez();
         Task<IEnumerable<object>> GetEmployeesWithoutNotClients();
+        Task<IEnumerable<object>> GetAllEmplyee();
+        Task<IEnumerable<object>> GetAllEmployeeClient();
         
 
     }

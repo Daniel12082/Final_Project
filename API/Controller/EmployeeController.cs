@@ -90,14 +90,19 @@ public class EmployeeController : BaseController
             case 10:
                 var result10 = await _unitOfWork.Employee.GetEmployeesWithoutClients();
                 return Ok(result10);
-
-            case 13:
-                var result11 = await _unitOfWork.Employee.GetEmployeesUnderPatriciaGomezHernandez();
+            case 11:
+                var result11 = await _unitOfWork.Employee.GetAllEmplyee();
                 return Ok(result11);
+            case 12:
+                var result12 = await _unitOfWork.Employee.GetAllEmployeeClient();
+                return Ok(result12);
+            case 13:
+                var result13 = await _unitOfWork.Employee.GetEmployeesUnderPatriciaGomezHernandez();
+                return Ok(result13);
 
             case 14:
-                var result12 = await _unitOfWork.Employee.GetEmployeesWithoutClient();
-                return Ok(result12);
+                var result14 = await _unitOfWork.Employee.GetEmployeesWithoutClient();
+                return Ok(result14);
 
             default:
                 return BadRequest("Consulta no válida");
