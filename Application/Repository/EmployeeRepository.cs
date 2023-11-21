@@ -165,6 +165,37 @@ namespace Application.Repository
 
         return await query.ToListAsync();
         }
+        public async Task<IEnumerable<object>> GetEmployeesUnderPatriciaGomezHernandez()
+        {
+        var query = from employee in _context.Employees
+                    join Boss in _context.Bosses on employee.IdBossFk equals Boss.Id
+                    where Boss.Name == "Patricia Gómez Hernández"
+                    select new
+                    {
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Email
+                    };
+
+        return await query.ToListAsync();
+        }
+        public async Task<IEnumerable<object>> GetEmployeesWithoutNotClients()
+{
+    var query = from employee in _context.Employees
+                where !_context.Clients.Any(client => client.IdEmployeeFk == employee.Id)
+                select new
+                {
+                    employee.FirstName,
+                    employee.LastName1,
+                    employee.LastName2,
+                    employee.Position
+                };
+
+    return await query.ToListAsync();
+}
+
+
     }
     }
 

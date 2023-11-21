@@ -43,43 +43,65 @@ public class EmployeeController : BaseController
     //     }
     //     return _mapper.Map<EmployeeDto>(entidad);
     // }
-    [HttpGet("boss/{bossCode}")]
+    [HttpGet("{consulting}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<OfficeDto>> Get(int consulting)
     {
         switch (consulting)
         {
             case 1:
-                var office = await _unitOfWork.Employee.GetEmployeesWithBossCode7();
-                return Ok(office);
+                var result1 = await _unitOfWork.Employee.GetEmployeesWithBossCode7();
+                return Ok(result1);
+
             case 2:
-                var office2 = await _unitOfWork.Employee.GetBossInformation();
-                return Ok(office2);
+                var result2 = await _unitOfWork.Employee.GetBossInformation();
+                return Ok(result2);
+
             case 3:
-                var office3 = await _unitOfWork.Employee.GetNonSalesRepresentatives();
-                return Ok(office3);
+                var result3 = await _unitOfWork.Employee.GetNonSalesRepresentatives();
+                return Ok(result3);
+
             case 4:
-                var office4 = await _unitOfWork.Employee.GetEmployeeBossInformation();
-                return Ok(office4);
+                var result4 = await _unitOfWork.Employee.GetEmployeeBossInformation();
+                return Ok(result4);
+
             case 5:
-                var office5 = await _unitOfWork.Employee.GetEmployeeHierarchy();
-                return Ok(office5);
+                var result5 = await _unitOfWork.Employee.GetEmployeeHierarchy();
+                return Ok(result5);
+
             case 6:
-                var office6 = await _unitOfWork.Employee.GetEmployeesWithoutOffice();
-                return Ok(office6);
+                var result6 = await _unitOfWork.Employee.GetEmployeesWithoutOffice();
+                return Ok(result6);
+
             case 7:
-                var office7 = await _unitOfWork.Employee.GetEmployeesWithoutClientAndOffice();
-                return Ok(office7);
+                var result7 = await _unitOfWork.Employee.GetEmployeesWithoutClientAndOffice();
+                return Ok(result7);
+
             case 8:
-                var office8 = await _unitOfWork.Employee.GetEmployeesWithoutClient();
-                return Ok(office8);
+                var result8 = await _unitOfWork.Employee.GetEmployeesWithoutClient();
+                return Ok(result8);
+
             case 9:
-                var office9 = await _unitOfWork.Employee.GetEmployeesWithoutClientsAndBoss();
-                return Ok(office9);
+                var result9 = await _unitOfWork.Employee.GetEmployeesWithoutClientsAndBoss();
+                return Ok(result9);
+
             case 10:
-                var office10 = await _unitOfWork.Employee.GetEmployeesWithoutClients();
-                return Ok(office10);
+                var result10 = await _unitOfWork.Employee.GetEmployeesWithoutClients();
+                return Ok(result10);
+
+            case 13:
+                var result11 = await _unitOfWork.Employee.GetEmployeesUnderPatriciaGomezHernandez();
+                return Ok(result11);
+
+            case 14:
+                var result12 = await _unitOfWork.Employee.GetEmployeesWithoutClient();
+                return Ok(result12);
+
             default:
                 return BadRequest("Consulta no válida");
         }
+
     }
 }
