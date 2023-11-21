@@ -11,7 +11,7 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(JardineriaContext))]
-    [Migration("20231121001724_update")]
+    [Migration("20231121005048_update")]
     partial class update
     {
         /// <inheritdoc />
