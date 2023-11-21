@@ -9,6 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IProduct : IGenericString<Product>
     {
-        
+        Task<IEnumerable<object>> GetStock_Products();
     }
 }
