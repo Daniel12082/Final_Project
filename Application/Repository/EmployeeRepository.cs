@@ -195,7 +195,28 @@ namespace Application.Repository
     return await query.ToListAsync();
 }
 
+        public async Task<IEnumerable<object>> GetAllEmplyee()
+        {
+        var totalEmpleados = await _context.Employees.CountAsync();
+
+        return new List<string> { $"El total de empleados es: {totalEmpleados}" };
+        }
+        public async Task<IEnumerable<object>> GetAllEmployeeClient()
+        {
+            var query = from employee in _context.Employees
+                where _context.Clients.Any(client => client.IdEmployeeFk == employee.Id)
+                select new
+                {
+                    FirstName = employee.FirstName,
+                    LastName1 = employee.LastName1,
+                    LastName2 = employee.LastName2,
+                    Position = employee.Position
+                };
+
+    return await query.ToListAsync();
+        }
 
     }
+    
     }
 
