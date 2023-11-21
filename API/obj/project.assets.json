@@ -6092,19 +6092,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ferch\\.nuget\\packages\\": {}
+    "C:\\Users\\sobri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ferch\\OneDrive\\Escritorio\\Campus\\.NetCore\\ejercicios\\Final_Project\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\ferch\\OneDrive\\Escritorio\\Campus\\.NetCore\\ejercicios\\Final_Project\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\ferch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ferch\\OneDrive\\Escritorio\\Campus\\.NetCore\\ejercicios\\Final_Project\\API\\obj\\",
+      "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\sobri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ferch\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\sobri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -6116,8 +6116,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\ferch\\OneDrive\\Escritorio\\Campus\\.NetCore\\ejercicios\\Final_Project\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\ferch\\OneDrive\\Escritorio\\Campus\\.NetCore\\ejercicios\\Final_Project\\Application\\Application.csproj"
+            "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\sobri\\Pictures\\Final_Project\\Application\\Application.csproj"
             }
           }
         }
@@ -6194,7 +6194,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

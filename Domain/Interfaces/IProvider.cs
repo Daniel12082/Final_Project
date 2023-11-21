@@ -6,7 +6,7 @@ using Domain.Entities;
 
 namespace Domain.Interfaces
 {
-    public interface IProveedor : IGeneric<Proveedor>
+    public interface IProvider : IGeneric<Provider>
     {
         
     }

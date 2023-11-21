@@ -45,7 +45,7 @@ public partial class JardineriaContext : DbContext
 
     public virtual DbSet<ProductLine> ProductLines { get; set; }
 
-    public virtual DbSet<Proveedor> Providers { get; set; }
+    public virtual DbSet<Provider> Providers { get; set; }
 
     public virtual DbSet<State> States { get; set; }
     public virtual DbSet<User> Users {get; set;}

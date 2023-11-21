@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Proveedor : BaseEntity
+public partial class Provider : BaseEntity
 {
 
     public string Name { get; set; } = null!;

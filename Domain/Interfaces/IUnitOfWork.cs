@@ -21,7 +21,7 @@ namespace Domain.Interfaces;
         IPayment Payment {get;}
         IProduct Products {get;}
         IProductLine ProductLines {get;}
-        IProveedor Proveedores {get;}
+        IProvider Providers {get;}
         IState States {get;}
         IUser User {get;}
         Task<int> SaveAsync();

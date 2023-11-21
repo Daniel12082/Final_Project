@@ -9,12 +9,12 @@ using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-public class ProveedorController: BaseController
+public class ProviderController: BaseController
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ProveedorController(IUnitOfWork unitOfWork, IMapper mapper)
+        public ProviderController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -23,56 +23,56 @@ public class ProveedorController: BaseController
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<Proveedor>>> Get()
+        public async Task<ActionResult<IEnumerable<Provider>>> Get()
         {
-            var entidades = await _unitOfWork.Proveedores.GetAllAsync();
-            return _mapper.Map<List<Proveedor>>(entidades);
+            var entidades = await _unitOfWork.Providers.GetAllAsync();
+            return _mapper.Map<List<Provider>>(entidades);
         }
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ProveedorDto>> Get(int id)
+        public async Task<ActionResult<ProviderDto>> Get(int id)
         {
-            var entidad = await _unitOfWork.Proveedores.GetByIdAsync(id);
+            var entidad = await _unitOfWork.Providers.GetByIdAsync(id);
             if(entidad == null)
             {
                 return NotFound();
             }
-            return _mapper.Map<ProveedorDto>(entidad);
+            return _mapper.Map<ProviderDto>(entidad);
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Proveedor>> Post(ProveedorDto ProveedorDto)
+        public async Task<ActionResult<Provider>> Post(ProviderDto ProviderDto)
         {
-            var entidad = _mapper.Map<Proveedor>(ProveedorDto);
-            this._unitOfWork.Proveedores.Add(entidad);
+            var entidad = _mapper.Map<Provider>(ProviderDto);
+            this._unitOfWork.Providers.Add(entidad);
             await _unitOfWork.SaveAsync();
             if(entidad == null)
             {
                 return BadRequest();
             }
-            ProveedorDto.Id = entidad.Id;
-            return CreatedAtAction(nameof(Post), new {id = ProveedorDto.Id}, ProveedorDto);
+            ProviderDto.Id = entidad.Id;
+            return CreatedAtAction(nameof(Post), new {id = ProviderDto.Id}, ProviderDto);
         }
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ProveedorDto>> Put(int id, [FromBody] ProveedorDto ProveedorDto)
+        public async Task<ActionResult<ProviderDto>> Put(int id, [FromBody] ProviderDto ProviderDto)
         {
-            if(ProveedorDto == null)
+            if(ProviderDto == null)
             {
                 return NotFound();
             }
-            var entidades = _mapper.Map<Proveedor>(ProveedorDto);
-            _unitOfWork.Proveedores.Update(entidades);
+            var entidades = _mapper.Map<Provider>(ProviderDto);
+            _unitOfWork.Providers.Update(entidades);
             await _unitOfWork.SaveAsync();
-            return ProveedorDto;
+            return ProviderDto;
         }
 
         [HttpDelete("{id}")]
@@ -80,12 +80,12 @@ public class ProveedorController: BaseController
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(int id)
         {
-            var entidad = await _unitOfWork.Proveedores.GetByIdAsync(id);
+            var entidad = await _unitOfWork.Providers.GetByIdAsync(id);
             if(entidad == null)
             {
                 return NotFound();
             }
-            _unitOfWork.Proveedores.Delete(entidad);
+            _unitOfWork.Providers.Delete(entidad);
             await _unitOfWork.SaveAsync();
             return NoContent();
         }

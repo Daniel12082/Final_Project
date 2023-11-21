@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
-    public class ProveedorConfiguration : IEntityTypeConfiguration<Proveedor>
+    public class ProviderConfiguration : IEntityTypeConfiguration<Provider>
     {
-        public void Configure(EntityTypeBuilder<Proveedor> builder)
+        public void Configure(EntityTypeBuilder<Provider> builder)
         {
             builder.HasKey(e => e.Id).HasName("PRIMARY");
 
