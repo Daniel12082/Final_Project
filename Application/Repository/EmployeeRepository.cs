@@ -16,58 +16,155 @@ namespace Application.Repository
     {
             _context = context;
     }
-public async Task<IEnumerable<object>> GetEmployeesByBossCode(int bossCode)    {
-    try
+    public async Task<IEnumerable<object>> GetEmployeesWithBossCode7()
     {
-        var employees = await (
-            from employee in _context.Employees
-            where employee.IdBossFk == bossCode
-            select new
-            {
-                FirstName = employee.FirstName,
-                LastName = employee.LastName1,
-                LastName2 = employee.LastName2,
-                Email = employee.Email
-            }
-        ).ToListAsync();
+        var query = from employee in _context.Employees
+                    join boss in _context.Bosses on employee.IdBossFk equals boss.Id
+                    where boss.Id == 7
+                    select new
+                    {
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Email
+                    };
 
-        return employees;
+        return await query.ToListAsync();
     }
-    catch (Exception ex)
+    public async Task<IEnumerable<object>> GetBossInformation()
     {
-        // Manejar la excepción según tus necesidades (puedes registrarla o mostrarla en la salida)
-        Console.WriteLine($"Error al obtener empleados: {ex.Message}");
-        throw; // Puedes elegir relanzar la excepción o manejarla de manera diferente
-    }
-    }
+        var query = from boss in _context.Bosses
+                    join employee in _context.Employees on boss.Id equals employee.IdBossFk
+                    select new
+                    {
+                        PositionName = employee.Position, // Asumiendo que el nombre del puesto está en el atributo 'Position' de Employee
+                        boss.Name,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Email
+                    };
 
-        public Task<IEnumerable<object>> GetEmployeesByBossCode()
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetNonSalesRepresentatives()
+    {
+        var query = from employee in _context.Employees
+                    where employee.Position != "Representante de Ventas"
+                    select new
+                    {
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Position,
+                    };
+
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetEmployeeBossInformation()
+    {
+        var query = from employee in _context.Employees
+                    join boss in _context.Bosses on employee.IdBossFk equals boss.Id
+                    select new
+                    {
+                        BossName = boss.Name,
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                    };
+
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetEmployeeHierarchy()
+    {
+        var query = from employee in _context.Employees
+                    join boss in _context.Bosses on employee.IdBossFk equals boss.Id into employeeBossJoin
+                    from employeeBoss in employeeBossJoin.DefaultIfEmpty()
+                    join grandBoss in _context.Bosses on employeeBoss.Id equals grandBoss.Id into employeeGrandBossJoin
+                    from employeeGrandBoss in employeeGrandBossJoin.DefaultIfEmpty()
+                    join grandGrandBoss in _context.Bosses on employeeGrandBoss.Id equals grandGrandBoss.Id into employeeGrandGrandBossJoin
+                    from employeeGrandGrandBoss in employeeGrandGrandBossJoin.DefaultIfEmpty()
+                    select new
+                    {
+                        EmployeeName = $"{employee.FirstName} {employee.LastName1} {employee.LastName2}",
+                        BossName = employeeBoss != null ? employeeBoss.Name : null,
+                        GrandBossName = employeeGrandBoss != null ? employeeGrandBoss.Name : null,
+                        GrandGrandBossName = employeeGrandGrandBoss != null ? employeeGrandGrandBoss.Name : null
+                    };
+
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetEmployeesWithoutOffice()
+    {
+        var query = from employee in _context.Employees
+                    where employee.OfficeCode == null
+                    select new
+                    {
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Email
+                    };
+
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetEmployeesWithoutClient()
+    {
+        var query = from employee in _context.Employees
+                    where !_context.Clients.Any(client => client.IdEmployeeFk == employee.Id)
+                    select new
+                    {
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Email
+                    };
+
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetEmployeesWithoutClientAndOffice()
+    {
+        var query = from employee in _context.Employees
+                    where !_context.Clients.Any(client => client.IdEmployeeFk == employee.Id)
+                    && employee.OfficeCode != null // Asegura que el empleado tenga una oficina asociada
+                    join office in _context.Offices on employee.OfficeCode equals office.Id
+                    select new
+                    {
+                        EmployeeName = $"{employee.FirstName} {employee.LastName1} {employee.LastName2}",
+                        employee.Email,
+                        OfficeName = office.Id, // Ajusta esto según la estructura real de tu base de datos
+                        office.Phone
+                    };
+
+        return await query.ToListAsync();
+    }
+    public async Task<IEnumerable<object>> GetEmployeesWithoutClientsAndBoss()
+    {
+        var query = from employee in _context.Employees
+                    where !_context.Clients.Any(client => client.IdEmployeeFk == employee.Id)
+                    join boss in _context.Bosses on employee.IdBossFk equals boss.Id into employeeBossJoin
+                    from employeeBoss in employeeBossJoin.DefaultIfEmpty()
+                    select new
+                    {
+                        EmployeeName = $"{employee.FirstName} {employee.LastName1} {employee.LastName2}",
+                        employee.Email,
+                        BossName = employeeBoss != null ? employeeBoss.Name : "No tiene jefe asociado"
+                    };
+        return await query.ToListAsync();
+    }
+        public async Task<IEnumerable<object>> GetEmployeesWithoutClients()
         {
-            throw new NotImplementedException();
-        }   
-//1. ¿Cuántos empleados hay en la compañía?
-        public async Task<object> GetEmployeesQuantity()
-        {
-            return new { EmployeesQuantity = await _context.Employees.CountAsync() };
+        var query = from employee in _context.Employees
+                    where !_context.Clients.Any(client => client.IdEmployeeFk == employee.Id)
+                    select new
+                    {
+                        employee.FirstName,
+                        employee.LastName1,
+                        employee.LastName2,
+                        employee.Position
+                    };
+
+        return await query.ToListAsync();
         }
-//9.Devuelve un listado que muestre el nombre de cada empleados, el nombre de su jefe y el nombre del jefe de sus jefe.
-    public async Task<IEnumerable<object>> GetNameAndBossChief()
-    {
-        return await _context.Employees
-                .Select(c => new
-                {
-                    c.FirstName,
-                    Boss = c.IdBossFkNavigation.Name,
-                    Chief = c.IdBossFk
-
-                })
-                .ToListAsync();
-}
-        public Task<IEnumerable<object>> GetEmployeesByDepartment(int departmentId)
-        {
-            throw new NotImplementedException();
-        }
-
+    }
     }
 
-}

@@ -8,9 +8,17 @@ namespace Domain.Interfaces
 {
     public interface IEmployee : IGeneric<Employee>
     {
-        Task<IEnumerable<object>> GetEmployeesByBossCode();
-        Task<IEnumerable<object>> GetEmployeesByBossCode(int bossCode);
-        Task<IEnumerable<object>> GetEmployeesByDepartment(int departmentId);
-        Task<object> GetEmployeesQuantity();
+        Task<IEnumerable<object>> GetEmployeesWithBossCode7();
+        Task<IEnumerable<object>> GetBossInformation();
+        Task<IEnumerable<object>> GetNonSalesRepresentatives();
+        Task<IEnumerable<object>> GetEmployeeBossInformation();
+        Task<IEnumerable<object>> GetEmployeeHierarchy();
+        Task<IEnumerable<object>> GetEmployeesWithoutClient();
+        Task<IEnumerable<object>> GetEmployeesWithoutOffice();
+        Task<IEnumerable<object>> GetEmployeesWithoutClientAndOffice();
+        Task<IEnumerable<object>> GetEmployeesWithoutClientsAndBoss();
+        Task<IEnumerable<object>> GetEmployeesWithoutClients();
+        
+
     }
 }

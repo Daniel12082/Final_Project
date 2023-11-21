@@ -44,65 +44,42 @@ public class EmployeeController : BaseController
     //     return _mapper.Map<EmployeeDto>(entidad);
     // }
     [HttpGet("boss/{bossCode}")]
-    public async Task<IActionResult> GetEmployeesByBossCode(int bossCode)
+    public async Task<ActionResult<OfficeDto>> Get(int consulting)
     {
-        try
+        switch (consulting)
         {
-            var employees = await EmployeeRepository.(IdBossFk);
-            return Ok(employees);
+            case 1:
+                var office = await _unitOfWork.Employee.GetEmployeesWithBossCode7();
+                return Ok(office);
+            case 2:
+                var office2 = await _unitOfWork.Employee.GetBossInformation();
+                return Ok(office2);
+            case 3:
+                var office3 = await _unitOfWork.Employee.GetNonSalesRepresentatives();
+                return Ok(office3);
+            case 4:
+                var office4 = await _unitOfWork.Employee.GetEmployeeBossInformation();
+                return Ok(office4);
+            case 5:
+                var office5 = await _unitOfWork.Employee.GetEmployeeHierarchy();
+                return Ok(office5);
+            case 6:
+                var office6 = await _unitOfWork.Employee.GetEmployeesWithoutOffice();
+                return Ok(office6);
+            case 7:
+                var office7 = await _unitOfWork.Employee.GetEmployeesWithoutClientAndOffice();
+                return Ok(office7);
+            case 8:
+                var office8 = await _unitOfWork.Employee.GetEmployeesWithoutClient();
+                return Ok(office8);
+            case 9:
+                var office9 = await _unitOfWork.Employee.GetEmployeesWithoutClientsAndBoss();
+                return Ok(office9);
+            case 10:
+                var office10 = await _unitOfWork.Employee.GetEmployeesWithoutClients();
+                return Ok(office10);
+            default:
+                return BadRequest("Consulta no válida");
         }
-        catch (Exception ex)
-        {
-            // Manejar la excepción según tus necesidades
-            return StatusCode(500, $"Error: {ex.Message}");
-        }
-    }
-
-
-    [HttpPost]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<Employee>> Post(EmployeeDto EmployeeDto)
-    {
-        var entidad = _mapper.Map<Employee>(EmployeeDto);
-        this._unitOfWork.Employee.Add(entidad);
-        await _unitOfWork.SaveAsync();
-        if (entidad == null)
-        {
-            return BadRequest();
-        }
-        EmployeeDto.Id = entidad.Id;
-        return CreatedAtAction(nameof(Post), new { id = EmployeeDto.Id }, EmployeeDto);
-    }
-
-    [HttpPut("{id}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<EmployeeDto>> Put(int id, [FromBody] EmployeeDto EmployeeDto)
-    {
-        if (EmployeeDto == null)
-        {
-            return NotFound();
-        }
-        var entidades = _mapper.Map<Employee>(EmployeeDto);
-        _unitOfWork.Employee.Update(entidades);
-        await _unitOfWork.SaveAsync();
-        return EmployeeDto;
-    }
-
-    [HttpDelete("{id}")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Delete(int id)
-    {
-        var entidad = await _unitOfWork.Employee.GetByIdAsync(id);
-        if (entidad == null)
-        {
-            return NotFound();
-        }
-        _unitOfWork.Employee.Delete(entidad);
-        await _unitOfWork.SaveAsync();
-        return NoContent();
     }
 }
