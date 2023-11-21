@@ -8,6 +8,6 @@ namespace Domain.Interfaces
 {
     public interface IOrder : IGeneric<Order>
     {
-        
+        Task<IEnumerable<object>> GetStatus_Order();
     }
 }

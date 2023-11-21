@@ -30,7 +30,7 @@ public class OrderController: BaseController
             return _mapper.Map<List<Order>>(entidades);
         }
 
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -42,6 +42,23 @@ public class OrderController: BaseController
                 return NotFound();
             }
             return _mapper.Map<OrderDto>(entidad);
+        }*/
+
+        [HttpGet("{consulting}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<OfficeDto>> Get(int consulting)
+        {
+            switch (consulting)
+            {
+                case 1:
+                    var order = await _unitOfWork.Orders.GetStatus_Order();
+                    return Ok(order);
+
+                default:
+                    return BadRequest("Consulta no válida");
+            }
         }
 
         [HttpPost]
