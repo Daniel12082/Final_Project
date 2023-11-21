@@ -28,5 +28,25 @@ namespace Application.Repository
     return Task.FromResult((IEnumerable<object>)distinctStatus.Cast<object>());
 }
         
+        public Task<IEnumerable<object>> GetDelayed_Order()
+        {
+            var delayed = _context.Orders
+                .Where(x => x.Status == "Entregado")
+                .Where(x => x.ExpectedDate < x.DeliveryDate)
+                .Select(x => new { x.Id, x.ClientCode, x.ExpectedDate, x.DeliveryDate, x.Status })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)delayed.Cast<object>());
+        }
+
+        public Task<IEnumerable<object>> GetAdvanced_Order()
+        {
+            var delayed = _context.Orders
+                .Where(x => x.Status == "Entregado" && (x.ExpectedDate > x.DeliveryDate))
+                .Select(x => new { x.Id, x.ClientCode, x.ExpectedDate, x.DeliveryDate, x.Status })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)delayed.Cast<object>());
+        }
     }
 }
