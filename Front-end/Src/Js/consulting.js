@@ -8,41 +8,23 @@ entitiesDropdown.addEventListener('change', function() {
     // Lógica para cargar las opciones según la entidad seleccionada
     let options = [];
         switch (selectedEntity) {
-            case 'boss':
-                options = ['Option 1 for Boss', 'Option 2 for Boss', 'Option 3 for Boss'];
-                break;
-            case 'city':
-                options = ['Option 1 for City', 'Option 2 for City', 'Option 3 for City'];
-                break;
             case 'client':
-                options = ['Option 1 for Client', 'Option 2 for Client', 'Option 3 for Client'];
-                break;
-            case 'contact':
-                options = ['Option 1 for Contact', 'Option 2 for Contact', 'Option 3 for Contact'];
-                break;
-            case 'country':
-                options = ['Option 1 for Country', 'Option 2 for Country', 'Option 3 for Country'];
+                options = ['Ubicados en españa', 'Pagos en 2008', 'Ubicado en madrid y con empleado con id 11','Datos de los clientes y representante de ventas','Cliente que han hecho pagos y nombre su representante','Cliente que no han hecho pagos y nombre su representante','Cliente que han hecho pagos, nombre su representante y ciudad de la oficina del representante','Cliente que no han hecho pagos, nombre su representante y ciudad de la oficina del representante','Nombre, representante y ciudad de la oficina','Nombre s a los que no se les ha entregado a tiempo un pedido','No han realizado pagos','Sin pedidos','Sin pago y sin pedidos','Con pedido pero sin pago'];
                 break;
             case 'employee':
-                options = ['Option 1 for Employee', 'Option 2 for Employee', 'Option 3 for Employee'];
+                options = ['Codigo del jefe nro 7', 'Cargos', 'No son representante de ventas','Nombre de sus jefes','Jefe y jefe de su jefe','Sin oficina','Sin clientes','Sin clientes y los datos de su oficina','Sin oficina y sin clientes','Sin clientes y su jefe','Empleados totales','Nombre de los represena de ventay cuantos clientes tiene','Empleados que estan a cargo de ------','Datos de Empleados que no representan clientes'];
                 break;
             case 'office':
-                options = ['Option 1 for Office', 'Option 2 for Office', 'Option 3 for Office'];
+                options = ['Ciudad donde estan ubicadas', 'Ubicado en españa y sus telefonos', 'Direcciones que tengan clientes en ---------','Sin empleados que hayan sido los representantes de ventas de algún cliente que haya realizado la compra de algún producto de la gama Frutales','Nombre de empleados que no sean  representante de ventas','Ciudades y numero de empleados'];
                 break;
             case 'order':
-                options = ['Option 1 for Order', 'Option 2 for Order', 'Option 3 for Order'];
+                options = ['Estados de un pedido', 'Codigo del pedido,cliente, fecha de espera y fecha de entrega', 'Codigo,Cliente,Fecha de espera y fecha de entrega de los pedidos cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.','Estado rechazados','Pedido entregado en meses de enero'];
                 break;
             case 'payment':
-                options = ['Option 1 for Payment', 'Option 2 for Payment', 'Option 3 for Payment'];
+                options = ['Pagos del 2008 por Paypal', 'Formas de pago'];
                 break;
             case 'product':
-                options = ['Option 1 for Product', 'Option 2 for Product', 'Option 3 for Product'];
-                break;
-            case 'provider':
-                options = ['Option 1 for Provider', 'Option 2 for Provider', 'Option 3 for Provider'];
-                break;
-            case 'state':
-                options = ['Option 1 for State', 'Option 2 for State', 'Option 3 for State'];
+                options = ['Productos de la gama ornamental y que tienen más de 100 unidades en stock', 'Gamas de los productos', 'Productos que nunca han comprado','Productos que nunca han comprado','Producto mas caro'];
                 break;
             default:
                 options = ['Default Option 1', 'Default Option 2', 'Default Option 3'];
