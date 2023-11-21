@@ -48,5 +48,35 @@ namespace Application.Repository
 
             return Task.FromResult((IEnumerable<object>)delayed.Cast<object>());
         }
+
+        public Task<IEnumerable<object>> GetReturned_Order()
+        {
+            var delayed = _context.Orders
+                .Where(x => x.Status == "Rechazado" && (x.ExpectedDate.Year == 2009))
+                .Select(x => new { x.Id, x.ClientCode, x.ExpectedDate, x.DeliveryDate, x.Status })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)delayed.Cast<object>());
+        }
+
+        public Task<IEnumerable<object>> GetDelivered_Order()
+        {
+            var delayed = _context.Orders
+                .Where(x => x.Status == "Entregado" && (x.ExpectedDate.Month == 01))
+                .Select(x => new { x.Id, x.ClientCode, x.ExpectedDate, x.DeliveryDate, x.Status })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)delayed.Cast<object>());
+        }
+
+        public Task<IEnumerable<object>> GetStatus_Cantity_Order()
+        {
+            var statusCounts = _context.Orders
+                .GroupBy(x => x.Status)
+                .Select(x => new { Status = x.Key, Cantidad = x.Count() })
+                .ToList();
+
+            return Task.FromResult((IEnumerable<object>)statusCounts.Cast<object>());
+        }
     }
 }

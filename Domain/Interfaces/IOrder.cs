@@ -11,5 +11,8 @@ namespace Domain.Interfaces
         Task<IEnumerable<object>> GetStatus_Order();
         Task<IEnumerable<object>> GetDelayed_Order();
         Task<IEnumerable<object>> GetAdvanced_Order();
+        Task<IEnumerable<object>> GetReturned_Order();
+        Task<IEnumerable<object>> GetDelivered_Order();
+        Task<IEnumerable<object>> GetStatus_Cantity_Order();
     }
 }
