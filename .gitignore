@@ -397,13 +397,22 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-API/obj
-API/bin
-Domain/obj
-./Domain/bin
-./Persistence/obj
-./Persistence/bin
-./Aplication/obj
-./Aplication/bin
-./API/appsettings.Development.json
-./API/appsettings.json
+build/
+*.suo
+*.user
+_ReSharper.*/
+*.sdf
+bin/
+obj/
+Debug/
+Release/
+*.opensdf
+*.tlog
+*.log
+TestResult.xml
+*.VisualState.xml
+Version.cs
+Version.h
+Version.cpp
+*/bin/*
+*/obj/*
